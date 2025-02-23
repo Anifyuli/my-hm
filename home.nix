@@ -12,7 +12,6 @@
       nixpkgs-fmt
       nodejs_22
       pnpm
-      pnpm-shell-completion
     ];
     file = {
 
