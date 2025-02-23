@@ -1,4 +1,4 @@
-{ pkgs, nixgl, ... }:
+{ pkgs, ... }:
 
 {
   # Home Manager basic configurations
@@ -10,12 +10,15 @@
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
+      nodejs_22
+      pnpm
+      pnpm-shell-completion
     ];
     file = {
 
     };
     sessionVariables = {
-      # EDITOR = "emacs";
+      EDITOR = "vim";
     };
     shell.enableFishIntegration = true;
   };
@@ -23,14 +26,32 @@
   # nixGL Home Manager integration
   nixGL = {
     defaultWrapper = "mesa";
-    packages = nixgl.packages;
     vulkan.enable = true;
   };
 
+  # Nixpkgs configuration
+  nixpkgs.config = {
+    allowDirty = true;
+    allowUnfree = true;
+  };
+  
+  # Enable Home Manager
   programs.home-manager.enable = true;
 
-  # nh configurations
-  programs.nh.enable = true;
+  # Gradle configurations
+  programs.gradle = {
+    enable = true;
+    package = pkgs.gradle_8;
+    settings = {
+      "org.gradle.home" = pkgs.jdk17;
+    };
+  };
+
+  # Java configurations
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk17;
+  };
 
   # Vim configurations
   programs.vim = {
