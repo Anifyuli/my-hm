@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixgl.url = "github:nix-community/nixGL";
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nixgl, ... }:
+  outputs = { nixpkgs, home-manager, nixgl, nixvim, ... }:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -18,7 +22,10 @@
     homeConfigurations."anifyuli" = home-manager.lib.homeManagerConfiguration {
       inherit pkgs;
       extraSpecialArgs = { inherit nixgl; };
-      modules = [ ./home.nix ];
+      modules = [ 
+        ./home.nix 
+        nixvim.homeManagerModules.nixvim
+      ];
     };
   };
 }
