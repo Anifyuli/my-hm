@@ -98,6 +98,7 @@
 
     '';
     shellAliases = {
+      hm = "home-manager";
       logout = "loginctl kill-user $USER";
       warpstat = "curl https://www.cloudflare.com/cdn-cgi/trace/";
     };

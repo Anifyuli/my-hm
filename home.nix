@@ -16,9 +16,7 @@
       nodejs_22
       pnpm
     ];
-    file = {
-      ".ssh/allowed_signers".text = "* ${builtins.readFile /home/anifyuli/.ssh/github.pub}";
-    };
+    file = {};
     sessionVariables = {
       EDITOR = "vim";
     };
