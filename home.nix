@@ -17,7 +17,7 @@
       pnpm
     ];
     file = {
-
+      ".ssh/allowed_signers".text = "* ${builtins.readFile /home/anifyuli/.ssh/github.pub}";
     };
     sessionVariables = {
       EDITOR = "vim";
