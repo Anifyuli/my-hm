@@ -15,6 +15,7 @@
       nixpkgs-fmt
       nodejs_22
       pnpm
+      uv
     ];
     file = {};
     sessionVariables = {
