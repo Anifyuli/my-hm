@@ -16,6 +16,7 @@
       nodejs_22
       pnpm
       uv
+      yarn-berry
     ];
     file = {};
     sessionVariables = {
