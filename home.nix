@@ -36,7 +36,10 @@
     allowDirty = true;
     allowUnfree = true;
   };
-  
+
+  # Enable command-not-found for Home Manager
+  programs.command-not-found.enable = true;
+
   # Enable Home Manager
   programs.home-manager.enable = true;
 

@@ -8,13 +8,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixgl.url = "github:nix-community/nixGL";
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { nixpkgs, home-manager, nixgl, nixvim, ... }:
+  outputs = { nixpkgs, home-manager, nixgl, ... }:
   let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -24,7 +20,6 @@
       extraSpecialArgs = { inherit nixgl; };
       modules = [ 
         ./home.nix 
-        nixvim.homeManagerModules.nixvim
       ];
     };
   };
