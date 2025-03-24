@@ -10,7 +10,8 @@
     homeDirectory = "/home/anifyuli";
     stateVersion = "25.05";
     packages = with pkgs; [
-      dotnet-sdk_10
+      dotnet-runtime
+      dotnet-sdk
       mono
       nixd
       nixfmt-rfc-style
