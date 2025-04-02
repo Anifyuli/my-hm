@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-    ./modules
+    ./options
   ];
 
   # Home Manager basic configurations
