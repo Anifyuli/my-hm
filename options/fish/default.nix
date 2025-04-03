@@ -1,13 +1,16 @@
 # fish configurations
-{ lib, pkgs, ... }: {
+{ lib, pkgs, ... }: 
 
+let
+  fnDir = ./functions;
+in {
   programs.fish = {
     enable = true;
     package = pkgs.fish;
     functions = {
-      fish_greeting = lib.fileContents ./fish_greeting.fish;
-      fish_prompt = lib.fileContents ./fish_prompt.fish;
-      fish_user_key_bindings = lib.fileContents ./fish_user_key_bindings.fish;
+      fish_greeting = lib.fileContents (fnDir + "/fish_greeting.fish");
+      fish_prompt = lib.fileContents (fnDir + "/fish_prompt.fish");
+      fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
     };
     interactiveShellInit = ''
       # Ensure $HOME/.local/bin is in PATH
