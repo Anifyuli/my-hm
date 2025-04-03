@@ -5,9 +5,9 @@
     enable = true;
     package = pkgs.fish;
     functions = {
-      fish_greeting = lib.fileContents ./fish/fish_greeting.fish;
-      fish_prompt = lib.fileContents ./fish/fish_prompt.fish;
-      fish_user_key_bindings = lib.fileContents ./fish/fish_user_key_bindings.fish;
+      fish_greeting = lib.fileContents ./fish_greeting.fish;
+      fish_prompt = lib.fileContents ./fish_prompt.fish;
+      fish_user_key_bindings = lib.fileContents ./fish_user_key_bindings.fish;
     };
     interactiveShellInit = ''
       # Ensure $HOME/.local/bin is in PATH
