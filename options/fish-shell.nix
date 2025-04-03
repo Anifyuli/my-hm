@@ -14,6 +14,9 @@
       if not contains -- $HOME/.local/bin $PATH
           set -gx PATH $HOME/.local/bin $HOME/bin $PATH
       end
+ 
+      # Set fish_greeting as the default greeting function
+      #set -g fish_greeting fish_greeting
 
       # Android SDK configuration
       set -gx ANDROID_HOME $HOME/.android/sdk
@@ -29,10 +32,6 @@
       if not contains -- $PNPM_HOME $PATH
           set -gx PATH $PNPM_HOME $PATH
       end
-    '';
-    loginShellInit = ''
-      # Set fish_greeting as the default greeting function
-      set -g fish_greeting fish_greeting
     '';
     shellAliases = {
       hm = "home-manager";
