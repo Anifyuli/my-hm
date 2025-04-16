@@ -16,7 +16,6 @@
       nodejs_22
       pnpm
       uv
-      watchman
       yarn-berry
     ];
     file = {};
