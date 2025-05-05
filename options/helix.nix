@@ -15,19 +15,21 @@
         };
         statusline = {
           left = [
-            "spinner"
             "mode"
+            "spinner"
           ];
           center = [ "file-name" ];
           right = [
             "diagnostics"
-            "selections"
             "position"
+            "primary-selection-length"
             "file-encoding"
-            "file-line-ending"
             "file-type"
+            "version-control"
+            "spacer"
+            "position-percentage"
           ];
-          separator = "/";
+          separator = "|";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
@@ -38,6 +40,10 @@
       language = [
         {
           name = "nix";
+          indent = {
+            tab-width = 2;
+            unit = "\t";
+          };
           auto-format = true;
           formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
           language-servers = [ "nixd" ];
