@@ -15,24 +15,31 @@
         };
         statusline = {
           left = [
+            "spacer"
             "mode"
             "spinner"
           ];
           center = [
             "file-modification-indicator"
+            "spacer"
             "version-control"
+            "separator"
             "file-name"
           ];
           right = [
             "diagnostics"
             "selections"
+            "separator"
             "position"
+            "separator"
             "file-encoding"
             "file-line-ending"
+            "separator"
             "total-line-numbers"
+            "separator"
             "file-type"
           ];
-          separator = "/";
+          separator = ">";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
