@@ -21,9 +21,9 @@
             "spinner"
           ];
           center = [
-            "file-modification-indicator"
-            "spacer"
             "version-control"
+            "spacer"
+            "file-modification-indicator"
             "spacer"
             "separator"
             "file-name"
