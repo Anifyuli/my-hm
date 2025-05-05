@@ -20,16 +20,16 @@
           ];
           center = [
             "file-modification-indicator"
-            "file-name"
             "version-control"
+            "file-name"
           ];
           right = [
             "diagnostics"
             "selections"
             "position"
             "file-encoding"
-            "total-line-numbers"
             "file-line-ending"
+            "total-line-numbers"
             "file-type"
           ];
           separator = "/";
