@@ -10,6 +10,7 @@
     homeDirectory = "/home/anifyuli";
     stateVersion = "25.05";
     packages = with pkgs; [
+      nil
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
@@ -18,7 +19,7 @@
       uv
       yarn-berry
     ];
-    file = {};
+    file = { };
     sessionVariables = {
       EDITOR = "vim";
       HMDIR = "$HOME/.config/home-manager/";
@@ -45,4 +46,3 @@
   programs.home-manager.enable = true;
 
 }
-
