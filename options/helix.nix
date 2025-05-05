@@ -1,3 +1,4 @@
+# Helix configurations
 { lib, pkgs, ... }:
 {
   programs.helix = {
