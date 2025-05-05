@@ -18,18 +18,21 @@
             "mode"
             "spinner"
           ];
-          center = [ "file-name" ];
+          center = [
+            "file-modification-indicator"
+            "file-name"
+            "version-control"
+          ];
           right = [
             "diagnostics"
+            "selections"
             "position"
-            "primary-selection-length"
             "file-encoding"
+            "total-line-numbers"
+            "file-line-ending"
             "file-type"
-            "version-control"
-            "spacer"
-            "position-percentage"
           ];
-          separator = "|";
+          separator = "/";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
