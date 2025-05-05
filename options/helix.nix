@@ -23,6 +23,7 @@
             "file-modification-indicator"
             "spacer"
             "version-control"
+            "spacer"
             "separator"
             "file-name"
           ];
@@ -39,7 +40,7 @@
             "separator"
             "file-type"
           ];
-          separator = ">";
+          separator = "»";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
