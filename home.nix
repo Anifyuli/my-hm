@@ -10,7 +10,6 @@
     homeDirectory = "/home/anifyuli";
     stateVersion = "25.05";
     packages = with pkgs; [
-      nil
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt

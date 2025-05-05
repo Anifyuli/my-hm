@@ -5,7 +5,9 @@
     settings = {
       theme = "gruvbox";
       editor = {
-        bufferline = true;
+        bufferline = "always";
+        indent-guides.render = true;
+        soft-wrap.enable = true;
         cursor-shape = {
           normal = "block";
           insert = "bar";
@@ -13,8 +15,8 @@
         };
         statusline = {
           left = [
-            "mode"
             "spinner"
+            "mode"
           ];
           center = [ "file-name" ];
           right = [
@@ -25,19 +27,25 @@
             "file-line-ending"
             "file-type"
           ];
-          separator = ">";
+          separator = "/";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
         };
       };
     };
-    languages.language = [
-      {
-        name = "nix";
-        auto-format = true;
-        formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
-      }
-    ];
+    languages = {
+      language = [
+        {
+          name = "nix";
+          auto-format = true;
+          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+          language-servers = [ "nixd" ];
+        }
+      ];
+      language-server.nixd = {
+        command = lib.getExe pkgs.nixd;
+      };
+    };
   };
 }
