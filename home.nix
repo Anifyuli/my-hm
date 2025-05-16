@@ -20,7 +20,6 @@
     ];
     file = { };
     sessionVariables = {
-      EDITOR = "vim";
       HMDIR = "$HOME/.config/home-manager/";
     };
     shell.enableFishIntegration = true;
