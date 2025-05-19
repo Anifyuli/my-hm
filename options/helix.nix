@@ -2,8 +2,13 @@
 { lib, pkgs, ... }:
 {
   programs.helix = {
-    enable = true;
     defaultEditor = true;
+    enable = true;
+    extraConfig = ''
+      [keys.normal.g]
+      x = "buffer-close"
+      X = "buffer-close"
+    '';
     settings = {
       theme = "gruvbox";
       editor = {
