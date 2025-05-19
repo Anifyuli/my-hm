@@ -10,12 +10,7 @@
         bufferline = "always";
         indent-guides.render = true;
         soft-wrap.enable = true;
-        cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-        };
-        auto-format = true;
+        color-modes = true;
         lsp = {
           enable = true;
           display-messages = true;
@@ -73,7 +68,6 @@
             tab-width = 2;
             unit = "\t";
           };
-          auto-format = true;
           formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
           language-servers = [ "nixd" ];
         }
