@@ -4,11 +4,6 @@
   programs.helix = {
     defaultEditor = true;
     enable = true;
-    extraConfig = ''
-      [keys.normal]
-      C-S-x = ":buffer-close"
-      C-A-x = ":buffer-close-all"
-    '';
     settings = {
       theme = "gruvbox";
       editor = {
@@ -65,6 +60,10 @@
         smart-tab = {
           enable = true;
         };
+      };
+      keys.normal = {
+        ctrl.shift.b = ":buffer-close";
+        ctrl.alt.x = ":buffer-close-all";
       };
     };
     languages = {
