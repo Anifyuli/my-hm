@@ -26,9 +26,6 @@
         inline-diagnostics = {
           cursor-line = "warning";
         };
-        whitespace = {
-          render = "all";
-        };
         cursorline = true;
         auto-completion = true;
         statusline = {
