@@ -34,7 +34,6 @@
             "spacer"
             "separator"
             "file-name"
-            "spacer"
             "file-modification-indicator"
           ];
           right = [
@@ -51,6 +50,7 @@
             "file-type"
           ];
           separator = "»";
+          mode-separator = "angled";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
