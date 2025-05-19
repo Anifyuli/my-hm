@@ -8,7 +8,10 @@
       theme = "gruvbox";
       editor = {
         bufferline = "always";
-        indent-guides.render = true;
+        indent-guides = {
+          render = true;
+          character = "┆";
+        };
         soft-wrap.enable = true;
         color-modes = true;
         lsp = {
@@ -50,7 +53,6 @@
             "file-type"
           ];
           separator = "»";
-          mode-separator = "angled";
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
