@@ -62,8 +62,8 @@
         };
       };
       keys.normal = {
-        ctrl.shift.b = ":buffer-close";
-        ctrl.alt.x = ":buffer-close-all";
+        c.s.b = ":buffer-close";
+        c.a.x = ":buffer-close-all";
       };
     };
     languages = {
