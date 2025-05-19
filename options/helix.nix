@@ -7,7 +7,7 @@
     extraConfig = ''
       [keys.normal.g]
       x = "buffer-close"
-      X = "buffer-close"
+      X = "buffer-close-all"
     '';
     settings = {
       theme = "gruvbox";
