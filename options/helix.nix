@@ -15,6 +15,22 @@
           insert = "bar";
           select = "underline";
         };
+        auto-format = true;
+        lsp = {
+          enable = true;
+          display-messages = true;
+          display-inlay-hints = true;
+          display-progress-messages = true;
+        };
+        end-of-line-diagnostics = "hint";
+        inline-diagnostics = {
+          cursor-line = "warning";
+        };
+        whitespace = {
+          render = "all";
+        };
+        cursorline = true;
+        auto-completion = true;
         statusline = {
           left = [
             "spacer"
@@ -46,6 +62,9 @@
           mode.normal = "NORMAL";
           mode.insert = "INSERT";
           mode.select = "SELECT";
+        };
+        smart-tab = {
+          enable = true;
         };
       };
     };
