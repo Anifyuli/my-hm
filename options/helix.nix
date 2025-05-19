@@ -32,10 +32,10 @@
           center = [
             "version-control"
             "spacer"
-            "file-modification-indicator"
-            "spacer"
             "separator"
             "file-name"
+            "spacer"
+            "file-modification-indicator"
           ];
           right = [
             "diagnostics"
