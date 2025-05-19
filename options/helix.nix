@@ -6,8 +6,8 @@
     enable = true;
     extraConfig = ''
       [keys.normal]
-      Ctrl-Shift-x = ":buffer-close"
-      Ctrl-Alt-x = ":buffer-close-all"
+      C-S-x = ":buffer-close"
+      C-A-x = ":buffer-close-all"
     '';
     settings = {
       theme = "gruvbox";
