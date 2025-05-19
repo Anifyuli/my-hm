@@ -5,9 +5,9 @@
     defaultEditor = true;
     enable = true;
     extraConfig = ''
-      [keys.normal.g]
-      x = "buffer-close"
-      X = "buffer-close-all"
+      [keys.normal]
+      Ctrl-Shift-x = ":buffer-close"
+      Ctrl-Alt-x = ":buffer-close-all"
     '';
     settings = {
       theme = "gruvbox";
