@@ -1,5 +1,5 @@
 # Git configuration
-{...}:
+{ pkgs, ... }:
 {
   programs = {
     git = {
@@ -11,11 +11,7 @@
         ];
       };
       enable = true;
-      extraConfig = {
-        commit.gpgsign = true;
-        gpg.format = "ssh";
-        user.signingkey = "~/.ssh/github.pub";
-      };
+      package = pkgs.gitFull;
       userEmail = "anifyuliansyah@gmail.com";
       userName = "Anifyuli";
     };
