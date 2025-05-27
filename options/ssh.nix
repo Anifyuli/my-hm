@@ -2,7 +2,7 @@
 { pkgs, ... }:
 {
 	programs.ssh = {
-		enable = true;
+		enable = false;
 		package = pkgs.openssh;
 		addKeysToAgent = "ask";
 	};
