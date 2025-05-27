@@ -3,7 +3,7 @@
 {
 	programs.ssh = {
 		enable = true;
-		hasKnownHosts = true;
+		hashKnownHosts = true;
 		package = pkgs.openssh;
 		addKeysToAgent = "ask";
 	};
