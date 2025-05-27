@@ -1,5 +1,5 @@
 # Git configuration
-{ pkgs, ... }:
+{ ... }:
 {
   programs = {
     git = {
@@ -11,7 +11,6 @@
         ];
       };
       enable = true;
-      package = pkgs.gitFull;
       userEmail = "anifyuliansyah@gmail.com";
       userName = "Anifyuli";
     };
