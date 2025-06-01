@@ -1,23 +1,28 @@
 # fish configurations
-{ lib, pkgs, ... }: 
+{ lib, pkgs, ... }:
 
 let
   fnDir = ./functions;
-in {
+in
+{
   programs.fish = {
     enable = true;
     package = pkgs.fish;
+    binds = {
+      "alt-esc".command =
+        "for cmd in sudo doas please; if command -q $cmd; fish_commandline_prepend $cmd; break; end; end";
+    };
     functions = {
       fish_greeting = lib.fileContents (fnDir + "/fish_greeting.fish");
       fish_prompt = lib.fileContents (fnDir + "/fish_prompt.fish");
-      fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
+      #fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
     };
     interactiveShellInit = ''
       # Ensure $HOME/.local/bin is in PATH
       if not contains -- $HOME/.local/bin $PATH
           set -gx PATH $HOME/.local/bin $HOME/bin $PATH
       end
- 
+
       # Set fish_greeting as the default greeting function
       #set -g fish_greeting fish_greeting
 
@@ -43,4 +48,3 @@ in {
     };
   };
 }
-
