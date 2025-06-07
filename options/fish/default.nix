@@ -9,13 +9,14 @@ in
     enable = true;
     package = pkgs.fish;
     binds = {
+      "alt-s".erase = true;
       "alt-esc".command =
         "for cmd in sudo doas please; if command -q $cmd; fish_commandline_prepend $cmd; break; end; end";
     };
     functions = {
       fish_greeting = lib.fileContents (fnDir + "/fish_greeting.fish");
       fish_prompt = lib.fileContents (fnDir + "/fish_prompt.fish");
-      fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
+      #fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
     };
     interactiveShellInit = ''
       # Ensure $HOME/.local/bin is in PATH
