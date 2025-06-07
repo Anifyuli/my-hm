@@ -9,9 +9,15 @@ in
     enable = true;
     package = pkgs.fish;
     binds = {
-      "alt-s".erase = true;
-      "alt-esc".command =
-        "for cmd in sudo doas please; if command -q $cmd; fish_commandline_prepend $cmd; break; end; end";
+      "alt-s" = {
+        enable = false;
+        erase = true;
+        operate = "preset";
+      };
+      "alt-esc" = {
+        enable = true;
+        command = "for cmd in sudo doas please; if command -q $cmd; fish_commandline_prepend $cmd; break; end; end";
+      };
     };
     functions = {
       fish_greeting = lib.fileContents (fnDir + "/fish_greeting.fish");
