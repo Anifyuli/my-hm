@@ -14,6 +14,6 @@
       userEmail = "anifyuliansyah@gmail.com";
       userName = "Anifyuli";
     };
-    git-credential-oauth.enable = true;
+    git-credential-oauth.enable = false;
   };
 }
