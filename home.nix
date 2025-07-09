@@ -11,6 +11,7 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       dust
+      foundry
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
