@@ -17,6 +17,7 @@
       nixpkgs-fmt
       nodejs_22
       pnpm
+      solc-select
       uv
       yarn-berry
     ];
