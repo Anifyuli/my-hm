@@ -12,6 +12,7 @@
     packages = with pkgs; [
       dust
       foundry
+      go-ethereum
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
