@@ -1,5 +1,5 @@
 # Development tools configurations
-{ config, lib, pkgs, ... }: 
+{ config, pkgs, ... }: 
 {
   # Gradle configurations
   programs.gradle = {
