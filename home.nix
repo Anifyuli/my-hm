@@ -6,16 +6,6 @@
 
   # Home Manager basic configurations
   home = {
-    activation = {
-      linkDesktopApplications = {
-        after = [
-          "writeBoundary"
-          "createXdgUserDirectories"
-        ];
-        before = [ ];
-        data = "/usr/bin/update-desktop-database";
-      };
-    };
     username = "anifyuli";
     homeDirectory = "/home/anifyuli";
     stateVersion = "25.05";
@@ -64,4 +54,9 @@
   # Enable Home Manager
   programs.home-manager.enable = true;
 
+  # XDG MIME
+  xdg = {
+    mime.enable = true;
+    mimeApps.enable = true;
+  };
 }
