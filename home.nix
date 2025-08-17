@@ -54,7 +54,7 @@
   # Enable Home Manager
   programs.home-manager.enable = true;
 
-  # XDG MIME
+  # XDG integration
   xdg = {
     mime.enable = true;
   };
