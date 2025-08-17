@@ -6,6 +6,16 @@
 
   # Home Manager basic configurations
   home = {
+    activation = {
+      linkDesktopApplications = {
+        after = [
+          "writeBoundary"
+          "createXdgUserDirectories"
+        ];
+        before = [ ];
+        data = "/usr/bin/update-desktop-database";
+      };
+    };
     username = "anifyuli";
     homeDirectory = "/home/anifyuli";
     stateVersion = "25.05";
@@ -32,9 +42,15 @@
   nixGL = {
     packages = nixgl.packages;
     defaultWrapper = "mesa";
-    installScripts = ["mesa"];
+    installScripts = [ "mesa" ];
     vulkan.enable = true;
   };
+
+  # Home Manager fontconfig
+  fonts.fontconfig.enable = true;
+
+  # Generic Linux distro integration
+  targets.genericLinux.enable = true;
 
   # Nixpkgs configuration
   nixpkgs.config = {
