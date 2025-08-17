@@ -1,5 +1,5 @@
 # Development tools configurations
-{ pkgs, ... }: 
+{ config, lib, pkgs, ... }: 
 {
   # Gradle configurations
   programs.gradle = {
@@ -14,5 +14,11 @@
   programs.java = {
     enable = true;
     package = pkgs.jdk17;
+  };
+
+  # Zed editor
+  programs.zed-editor = {
+    enable = true;
+    package = config.lib.nixGL.wrap pkgs.zed-editor;
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, nixgl, ... }:
 {
   imports = [
     ./options
@@ -30,7 +30,9 @@
 
   # nixGL Home Manager integration
   nixGL = {
+    packages = nixgl.packages;
     defaultWrapper = "mesa";
+    installScripts = ["mesa"];
     vulkan.enable = true;
   };
 
