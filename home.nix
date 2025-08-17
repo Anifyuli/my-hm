@@ -10,7 +10,6 @@
     homeDirectory = "/home/anifyuli";
     stateVersion = "25.05";
     packages = with pkgs; [
-      # Unwrapped
       dust
       foundry
       go-ethereum
@@ -21,9 +20,6 @@
       pnpm
       uv
       yarn-berry
-
-      # NixGL wrapped
-      (config.lib.nixGL.wrap pkgs.hoppscotch)
     ];
     file = { };
     sessionVariables = {
