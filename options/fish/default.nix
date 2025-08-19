@@ -40,7 +40,8 @@ in
             # tmux autostart
             if type -q tmux
     					if not test -n "$TMUX"
-        				tmux new-session -A -t tab:(tmux display-message -p "#{next_session_id}")
+    						set n (tmux list-sessions 2>/dev/null | count)
+								tmux new-session -As tab-$n
     					end
 						end
     '';
