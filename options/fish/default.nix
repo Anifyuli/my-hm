@@ -12,6 +12,7 @@ in
       fish_greeting = lib.fileContents (fnDir + "/fish_greeting.fish");
       fish_prompt = lib.fileContents (fnDir + "/fish_prompt.fish");
       fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
+      tmux = lib.fileContents (fnDir + "/tmux.fish");
     };
     interactiveShellInit = ''
       # Ensure $HOME/.local/bin is in PATH
