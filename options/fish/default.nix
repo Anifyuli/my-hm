@@ -39,10 +39,11 @@ in
 
             # tmux autostart
             if type -q tmux
-          		if not test -n "$TMUX"
-              	tmux attach-session -t default; or tmux new-session -s default
-          		end
-      			end
+    					if not test -n "$TMUX"
+        				set n (tmux list-sessions 2>/dev/null | count)
+        				tmux attach-session -t tab-$n; or tmux new-session -s tab-$n
+    					end
+						end
     '';
     shellAliases = {
       hm = "home-manager";
