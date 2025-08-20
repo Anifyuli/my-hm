@@ -40,10 +40,13 @@ in
       # tmux autostart
       if type -q tmux
         if not set -q TMUX
-          tmux has-session -t main 2>/dev/null
-          or tmux new-session -ds main
-          tmux new-window -t main
-          tmux attach-session -t main
+          if tmux has-session -t main 2>/dev/null
+            set win_count (tmux list-windows -t main | count)
+            tmux new-window -t main -n "win-$win_count"
+        else
+            tmux new-session -ds main -n "win-0"
+        end
+        tmux attach-session -t main
         end
       end
     '';
