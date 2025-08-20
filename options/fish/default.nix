@@ -41,7 +41,7 @@ in
             if type -q tmux
     					if not test -n "$TMUX"
     						set n (tmux list-sessions 2>/dev/null | count)
-								tmux new-session -As tab-$n
+								exec tmux new-session -s tab-$n
     					end
 						end
     '';
