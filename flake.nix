@@ -19,15 +19,16 @@
       home-manager,
       nixgl,
       ...
-    }:
+    } @ inputs:
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      username = "anifyuli";
     in
     {
-      homeConfigurations."anifyuli" = home-manager.lib.homeManagerConfiguration {
+      homeConfigurations.${username} = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        extraSpecialArgs = { inherit nixgl; };
+        extraSpecialArgs = { inherit inputs nixgl username; };
         modules = [
           ./home.nix
         ];
