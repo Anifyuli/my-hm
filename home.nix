@@ -1,4 +1,10 @@
-{ config, pkgs, nixgl, ... }:
+{
+  config,
+  inputs,
+  pkgs,
+  nixgl,
+  ...
+}:
 {
   imports = [
     ./options
@@ -38,6 +44,9 @@
 
   # Home Manager fontconfig
   fonts.fontconfig.enable = true;
+
+  # Nix configurations
+  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs.outPath}" ];
 
   # Generic Linux distro integration
   targets.genericLinux.enable = true;
