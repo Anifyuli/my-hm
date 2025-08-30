@@ -63,7 +63,9 @@
       };
       keys.normal = {
         b.d = ":buffer-close";
-        S.b.d = ":buffer-close-all";
+      };
+      keys.normal.b = {
+        D = ":buffer-close-all";
       };
     };
     languages = {
