@@ -1,5 +1,5 @@
 # Helix configurations
-{ inputs, lib, pkgs, ... }:
+{ inputs, lib, pkgs, username, ... }:
 {
   programs.helix = {
     defaultEditor = true;
@@ -85,7 +85,7 @@
           config.nixd =
             let
               flake = ''(builtins.getFlake "${builtins.toPath inputs.self.outPath}")'';
-              homeManagerOpts = "${flake}.homeConfigurations.options";
+              homeManagerOpts = "${flake}.homeConfigurations.${username}.options";
             in
             {
               nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
