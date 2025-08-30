@@ -1,5 +1,5 @@
 # Helix configurations
-{ lib, pkgs, ... }:
+{ inputs, lib, pkgs, ... }:
 {
   programs.helix = {
     defaultEditor = true;
@@ -62,8 +62,8 @@
         };
       };
       keys.normal = {
-        c.s.b = ":buffer-close";
-        c.a.x = ":buffer-close-all";
+        b.d = ":buffer-close";
+        S.b.d = ":buffer-close-all";
       };
     };
     languages = {
@@ -78,8 +78,23 @@
           language-servers = [ "nixd" ];
         }
       ];
-      language-server.nixd = {
-        command = lib.getExe pkgs.nixd;
+      language-server = {
+        nixd = {
+          command = lib.getExe pkgs.nixd;
+          args = [ "--semantic-tokens=true" ];
+          config.nixd =
+            let
+              flake = ''(builtins.getFlake "${builtins.toPath inputs.self.outPath}")'';
+              homeManagerOpts = "(let cfg = ${flake}.homeConfigurations; users = builtins.attrNames cfg; myUser = builtins.elemAt users 0; in (builtins.getAttr myUser cfg).options)";
+            in
+            {
+              nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
+              formatting.command = lib.getExe pkgs.nixfmt-rfc-style;
+              options = {
+                home-manager.expr = "${homeManagerOpts}.home-manager.users.type.getSubOptions []";
+              };
+            };
+        };
       };
     };
   };
