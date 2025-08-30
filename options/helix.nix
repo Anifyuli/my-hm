@@ -85,7 +85,7 @@
           config.nixd =
             let
               flake = ''(builtins.getFlake "${builtins.toPath inputs.self.outPath}")'';
-              homeManagerOpts = "(let cfg = ${flake}.homeConfigurations; users = builtins.attrNames cfg; myUser = builtins.elemAt users 0; in (builtins.getAttr myUser cfg).options)";
+              homeManagerOpts = "${flake}.homeConfigurations.options";
             in
             {
               nixpkgs.expr = "import ${flake}.inputs.nixpkgs { }";
