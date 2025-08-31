@@ -1,10 +1,4 @@
-{
-  config,
-  inputs,
-  pkgs,
-  nixgl,
-  ...
-}:
+{ inputs, pkgs, nixgl, username, ... }:
 {
   imports = [
     ./options
@@ -12,8 +6,8 @@
 
   # Home Manager basic configurations
   home = {
-    username = "anifyuli";
-    homeDirectory = "/home/anifyuli";
+    username = ''${username}'';
+    homeDirectory = ''/home/${username}'';
     stateVersion = "25.05";
     packages = with pkgs; [
       dust
