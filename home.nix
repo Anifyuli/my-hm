@@ -23,7 +23,7 @@
     ];
     file = { };
     sessionVariables = {
-      HMDIR = "$HOME/.config/home-manager/";
+      HM = "$HOME/.config/home-manager/";
     };
     shell.enableFishIntegration = true;
   };
