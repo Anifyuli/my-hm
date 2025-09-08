@@ -19,7 +19,7 @@
   # Zed editor
   programs.zed-editor = {
     enable = true;
-    package = config.lib.nixGL.wrap pkgs.zed-editor;
+    package = config.lib.nixGL.wrap pkgs.zed-editor-fhs_git;
     extensions = [
       "html"
       "gruvbox-material"
