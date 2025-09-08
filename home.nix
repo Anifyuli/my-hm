@@ -1,4 +1,10 @@
-{ inputs, pkgs, nixgl, username, ... }:
+{
+  inputs,
+  pkgs,
+  nixgl,
+  username,
+  ...
+}:
 {
   imports = [
     ./options
@@ -40,7 +46,10 @@
   fonts.fontconfig.enable = true;
 
   # Nix configurations
-  nix.nixPath = [ "nixpkgs=${inputs.nixpkgs.outPath}" ];
+  nix = {
+    package = pkgs.lix;
+    nixPath = [ "nixpkgs=${inputs.nixpkgs.outPath}" ];
+  };
 
   # Generic Linux distro integration
   targets.genericLinux.enable = true;
