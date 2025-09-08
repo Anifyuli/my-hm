@@ -18,7 +18,7 @@
 
   # Zed editor
   programs.zed-editor = {
-    enable = true;
+    enable = false;
     package = config.lib.nixGL.wrap pkgs.zed-editor-fhs_git;
     extensions = [
       "html"
