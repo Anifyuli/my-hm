@@ -1,5 +1,10 @@
 # Development tools configurations
-{ config, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   # Gradle configurations
   programs.gradle = {
@@ -86,6 +91,25 @@
       inlay_hints = {
         enabled = true;
       };
+      languages = {
+        Solidity = {
+          enableLanguageServer = true;
+          formatter = {
+            external = {
+              command = "forge";
+              arguments = [
+                "fmt"
+                "-"
+                "--raw"
+              ];
+            };
+          };
+          formatOnSave = true;
+          languageServers = [
+            "nomicfoundation-solidity-language-server"
+          ];
+        };
+      };
       lsp = {
         eslint = {
           settings = {
@@ -104,9 +128,7 @@
             ];
           };
         };
-        languages = { };
       };
     };
-
   };
 }
