@@ -1,7 +1,6 @@
 # Development tools configurations
 {
   config,
-  lib,
   pkgs,
   ...
 }:
@@ -93,7 +92,6 @@
       };
       languages = {
         Solidity = {
-          enableLanguageServer = true;
           formatter = {
             external = {
               command = "forge";
@@ -104,10 +102,6 @@
               ];
             };
           };
-          formatOnSave = true;
-          languageServers = [
-            "nomicfoundation-solidity-language-server"
-          ];
         };
       };
       lsp = {
