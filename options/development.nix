@@ -53,7 +53,7 @@
       ui_font_family = ".SystemUIFont";
       ui_font_weight = 800;
       buffer_font_size = 14;
-      buffer_font_family = "FiraCode Nerd Font Mono";
+      buffer_font_family = "IBM Plex Mono";
       buffer_font_features = {
         calt = true;
       };
