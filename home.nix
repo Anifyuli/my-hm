@@ -17,7 +17,6 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       dust
-      httpie-desktop
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
