@@ -17,14 +17,12 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       dust
-      foundry
-      go-ethereum
+      httpie-desktop
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
       nodejs_22
       pnpm
-      solc-select
       uv
       yarn-berry
     ];
