@@ -16,7 +16,6 @@
     homeDirectory = ''/home/${username}'';
     stateVersion = "25.05";
     packages = with pkgs; [
-      dust
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
