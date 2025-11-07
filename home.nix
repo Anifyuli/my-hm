@@ -16,6 +16,7 @@
     homeDirectory = ''/home/${username}'';
     stateVersion = "25.05";
     packages = with pkgs; [
+      inputs.flox.packages.${pkgs.system}.default
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
