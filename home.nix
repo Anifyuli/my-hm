@@ -58,6 +58,13 @@
     allowUnfree = true;
   };
 
+  # Chaotic Nyx stuff
+  chaotic.nyx = {
+    cache.enable = true;
+    nixPath.enable = true;
+    registry.enable = true;    
+  };
+
   # Enable command-not-found for Home Manager
   programs.command-not-found.enable = true;
 
