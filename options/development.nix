@@ -28,9 +28,9 @@
       "html"
       "gruvbox-material"
       "icons-modern-material"
+      "php"
       "react-snippets"
       "react-typescript-snippets"
-      "solidity"
       "wakatime"
     ];
     userSettings = {
@@ -91,17 +91,11 @@
         enabled = true;
       };
       languages = {
-        Solidity = {
-          formatter = {
-            external = {
-              command = "forge";
-              arguments = [
-                "fmt"
-                "-"
-                "--raw"
-              ];
-            };
-          };
+        PHP = {
+          language_servers = [
+            "phpactor"
+            "eslint"
+          ];
         };
       };
       lsp = {
