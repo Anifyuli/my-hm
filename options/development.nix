@@ -92,7 +92,7 @@
       };
       languages = {
         HTML = {
-          formatter = "language-server";
+          formatter = "auto";
         };
         PHP = {
           language_servers = [
