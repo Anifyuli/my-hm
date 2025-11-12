@@ -93,8 +93,9 @@
       languages = {
         PHP = {
           language_servers = [
-            "phpactor"
             "eslint"
+            "phpactor"
+            "vscode-html-language-server"
           ];
         };
       };
@@ -103,6 +104,16 @@
           settings = {
             codeActionOnSave = {
               rules = [ "import/order" ];
+            };
+          };
+        };
+        vscode-html-language-server = {
+          settings = {
+            format = {
+              contentUnformatted = [
+                "svg"
+                "script"
+              ];
             };
           };
         };
