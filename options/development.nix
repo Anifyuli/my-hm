@@ -91,6 +91,9 @@
         enabled = true;
       };
       languages = {
+        HTML = {
+          formatter = "language-server";
+        };
         PHP = {
           language_servers = [
             "eslint"
