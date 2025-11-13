@@ -35,7 +35,7 @@
     ];
     userSettings = {
       agent = {
-        enabled = false;
+        enabled = true;
         default_model = {
           provider = "zed.dev";
           model = "claude-sonnet-4";
