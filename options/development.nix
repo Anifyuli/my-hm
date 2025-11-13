@@ -36,10 +36,6 @@
     userSettings = {
       agent = {
         enabled = true;
-        default_model = {
-          provider = "zed.dev";
-          model = "claude-sonnet-4";
-        };
       };
       autosave = "on_window_change";
       restore_on_startup = "none";
