@@ -32,7 +32,7 @@
   };
 
   # nixGL Home Manager integration
-  nixGL = {
+  target.genericLinux.nixGL = {
     packages = nixgl.packages;
     defaultWrapper = "mesa";
     installScripts = [ "mesa" ];
