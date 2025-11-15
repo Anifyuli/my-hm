@@ -43,7 +43,6 @@
   # Generic Linux distro integration
   targets.genericLinux = {
     enable = true;
-    gpu.enable = true;
     nixGL = {
       packages = nixgl.packages;
       defaultWrapper = "mesa";
