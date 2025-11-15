@@ -31,14 +31,6 @@
     shell.enableFishIntegration = true;
   };
 
-  # nixGL Home Manager integration
-  nixGL = {
-    packages = nixgl.packages;
-    defaultWrapper = "mesa";
-    installScripts = [ "mesa" ];
-    vulkan.enable = true;
-  };
-
   # Home Manager fontconfig
   fonts.fontconfig.enable = true;
 
@@ -49,7 +41,17 @@
   };
 
   # Generic Linux distro integration
-  targets.genericLinux.enable = true;
+  targets.genericLinux = {
+    enable = true;
+    gpu.enable = true;
+    nixGL = {
+      packages = nixgl.packages;
+      defaultWrapper = "mesa";
+      installScripts = [ "mesa" ];
+      vulkan.enable = true;
+    };
+
+  };
 
   # Nixpkgs configuration
   nixpkgs.config = {
@@ -61,7 +63,7 @@
   chaotic.nyx = {
     cache.enable = true;
     nixPath.enable = true;
-    registry.enable = true;    
+    registry.enable = true;
   };
 
   # Enable command-not-found for Home Manager
