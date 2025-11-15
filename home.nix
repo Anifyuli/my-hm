@@ -49,7 +49,6 @@
       installScripts = [ "mesa" ];
       vulkan.enable = true;
     };
-
   };
 
   # Nixpkgs configuration

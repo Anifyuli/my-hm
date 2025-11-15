@@ -1,5 +1,5 @@
 {
-  description = "Home Manager on anifyuli@ThinkPad-X280";
+  description = "Standalone Home Manager on anifyuli@ThinkPad-X280";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
