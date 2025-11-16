@@ -38,7 +38,6 @@ in
       end
     '';
     shellAliases = {
-      hm = "nh home";
       logout = "loginctl kill-user $USER";
       warpstat = "curl https://www.cloudflare.com/cdn-cgi/trace/";
     };
