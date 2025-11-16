@@ -57,6 +57,9 @@
     allowUnfree = true;
   };
 
+  # nh, Nix helper
+  programs.nh.enable = true;
+
   # Chaotic Nyx stuff
   chaotic.nyx = {
     cache.enable = true;
