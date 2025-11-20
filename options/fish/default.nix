@@ -13,7 +13,7 @@ in
       fish_prompt = lib.fileContents (fnDir + "/fish_prompt.fish");
       fish_user_key_bindings = lib.fileContents (fnDir + "/fish_user_key_bindings.fish");
     };
-    interactiveShellInit = lib.mkMerge (builtins.readFiles "./config.fish");
+    interactiveShellInit = lib.mkMerge (builtins.readFile "./config.fish");
     shellAliases = {
       logout = "loginctl kill-user $USER";
       warpstat = "curl https://www.cloudflare.com/cdn-cgi/trace/";
