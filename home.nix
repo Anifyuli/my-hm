@@ -67,8 +67,8 @@
     registry.enable = true;
   };
 
-  # Enable command-not-found for Home Manager
-  programs.command-not-found.enable = true;
+  # Command-not-found for Home Manager
+  programs.command-not-found.enable = false;
 
   # Enable Home Manager
   programs.home-manager.enable = true;
