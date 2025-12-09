@@ -60,13 +60,6 @@
   # nh, Nix helper
   programs.nh.enable = true;
 
-  # Chaotic Nyx stuff
-  chaotic.nyx = {
-    cache.enable = true;
-    nixPath.enable = true;
-    registry.enable = true;
-  };
-
   # Command-not-found for Home Manager
   programs.command-not-found.enable = false;
 

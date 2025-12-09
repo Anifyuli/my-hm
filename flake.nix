@@ -11,7 +11,6 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     flox.url = "github:flox/flox/latest";
   };
 
@@ -20,7 +19,6 @@
       nixpkgs,
       home-manager,
       nixgl,
-      chaotic,
       ...
     }@inputs:
     let
@@ -33,7 +31,6 @@
         inherit pkgs;
         extraSpecialArgs = { inherit inputs nixgl username; };
         modules = [
-          chaotic.homeManagerModules.default
           ./home.nix
         ];
       };
