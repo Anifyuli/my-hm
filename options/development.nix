@@ -27,7 +27,7 @@
     extensions = [
       "html"
       "gruvbox-material"
-      "icons-modern-material"
+      "modern-icons"
       "php"
       "react-snippets"
       "react-typescript-snippets"
@@ -36,6 +36,10 @@
     userSettings = {
       agent = {
         enabled = true;
+        default_model = {
+          model = "claude-sonnet-4";
+          provider = "zed.dev";
+        };
       };
       autosave = "on_window_change";
       restore_on_startup = "none";
@@ -62,14 +66,18 @@
       };
       icon_theme = {
         mode = "system";
-        light = "Icons modern material (Light)";
-        dark = "Icons modern material (Dark)";
+        light = "Modern Icons (Light)";
+        dark = "Modern Icons (Dark)";
       };
       collaboration_panel = {
         dock = "right";
       };
       tab_bar = {
         show = true;
+      };
+      title_bar = {
+        show_menus = true;
+        show_branch_icons = true;
       };
       tabs = {
         show_diagnostics = "errors";
