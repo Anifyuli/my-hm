@@ -73,7 +73,6 @@
       };
       title_bar = {
         show_menus = true;
-        show_branch_icons = true;
       };
       tabs = {
         show_diagnostics = "errors";
