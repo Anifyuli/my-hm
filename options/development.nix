@@ -95,6 +95,7 @@
           formatter = "auto";
         };
         PHP = {
+          format_on_save = "off";
           language_servers = [
             "eslint"
             "phpactor"
