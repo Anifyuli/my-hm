@@ -38,7 +38,6 @@
         enabled = true;
       };
       autosave = "on_window_change";
-      restore_on_startup = "none";
       soft_wrap = "editor_width";
       show_wrap_guides = true;
       vim_mode = true;

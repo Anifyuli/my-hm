@@ -19,8 +19,8 @@
       nixd
       nixfmt-rfc-style
       nixpkgs-fmt
-      nodejs_24
-      pnpm
+#      nodejs_24
+#      pnpm
       uv
       yarn-berry
     ];
