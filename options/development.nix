@@ -8,7 +8,7 @@
   # Gradle configurations
   programs.gradle = {
     enable = true;
-    package = pkgs.gradle_8;
+    package = pkgs.gradle_9;
     settings = {
       "org.gradle.home" = pkgs.jdk17;
     };
