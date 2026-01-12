@@ -17,9 +17,10 @@
     stateVersion = "25.05";
     packages = with pkgs; [
       nixd
-      nixfmt-rfc-style
+      nixfmt
       nixpkgs-fmt
       uv
+      wakatime-cli
       yarn-berry
     ];
     file = { };

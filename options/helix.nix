@@ -76,7 +76,7 @@
             tab-width = 2;
             unit = "\t";
           };
-          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+          formatter.command = lib.getExe pkgs.nixfmt;
           language-servers = [ "nixd" ];
         }
       ];

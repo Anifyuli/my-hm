@@ -35,6 +35,7 @@
     ];
     userSettings = {
       agent = {
+        default_profile = "write";
         enabled = true;
       };
       autosave = "on_window_change";
